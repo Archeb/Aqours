@@ -32,6 +32,16 @@
 <div class="blogbar fixed-bottom {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{/if}}">
 	<div class="container">
 		{{#is "home, paged"}}{{pagination}}{{/is}}
+		{{#is "post"}}
+			{{#post}}
+				{{#prev_post}}
+			    <div class="nextpage"><a href="{{url}}" class="mif-chevron-thin-right mif-4x fg-white" alt="{{title}}"></a></div>
+			    {{/prev_post}}
+			    {{#next_post}}
+			    <div class="prevpage"><a href="{{url}}" class="mif-chevron-thin-left mif-4x fg-white" alt="{{title}}"></a></div>
+			    {{/next_post}}
+			{{/post}}
+		{{/is}}
 		<h3><a style="color: white;" href="{{@blog.url}}">{{@blog.title}}</a></h3>
 		<h5>{{@blog.description}}</h5>
 		<a class="button cycle-button ribbed-blue" style="color:white"><span class="mif-twitter icon"></span></a>

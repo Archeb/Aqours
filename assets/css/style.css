@@ -278,7 +278,7 @@ opacity:0.85;
 
 .prevpage{
 	float:left;
-	width:30%;
+	margin-left:30%;
 }
 .prevpage a{
 	position:absolute; top:50%;transform:translate(-50%,-50%);
@@ -288,5 +288,5 @@ opacity:0.85;
 }
 .nextpage{
 	float:right;
-	width:30%;
+	margin-right:30%;
 }
