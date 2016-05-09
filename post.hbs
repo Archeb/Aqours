@@ -1,0 +1,54 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+
+<div class="postwapper">
+	<div class="artmain">
+		<div class="title">
+			<div class="textinfo">
+				<h3>{{title}}</h3>
+				<p><span class="mif-user icon"></span> {{author.name}} 发布于 {{date format="DD MMMM YYYY"}}</p>
+				<p><span class="mif-bubble icon"></span> 共有2333条评论，最后评论于2016年5月2日12:40:58</p>
+			</div>
+			<div class="avatar">
+				<img src="{{author.image}}">
+			</div>
+		</div>
+		<div class="content">
+			{{content}}
+		</div>
+		<div class="comments"> 
+			<div id="disqus_thread" class="margin10"></div>
+			<script>
+			/**
+			* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+			*/
+			var disqus_config = function () {
+			this.page.url = "https://qwq.moe/22.html";
+			this.page.identifier = 22};
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+			
+			s.src = '//archeb.disqus.com/embed.js';
+			
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			 
+			</div>
+
+
+		</div>
+
+	</div>
+</div>
+
+{{/post}}

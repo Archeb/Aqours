@@ -1,0 +1,10 @@
+<div class="nav">
+	<div class="bloglogo">
+		<img src="{{@blog.logo}}"/>
+	</div>
+    <ul>
+        {{#foreach navigation}}
+        <li class="bg-hover-grayLighter{{#if current}} bg-dark{{/if}}"><a class="fg-hover-dark {{#if current}} fg-white"{{/if}}" href="{{url}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+</div>

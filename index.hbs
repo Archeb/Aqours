@@ -1,0 +1,39 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<style>
+body{
+	overflow-x:auto;
+	white-space: nowrap;
+}
+</style>
+<script>
+	        (function($) {
+            $.StartScreen = function(){
+                var plugin = this;
+                plugin.init = function(){
+                    addMouseWheel();
+                };
+                var addMouseWheel = function (){
+                    $("body").mousewheel(function(event, delta, deltaX, deltaY){
+                        var page = $(document);
+                        var scroll_value = delta * 50;
+                        page.scrollLeft(page.scrollLeft() - scroll_value);
+                        return false;
+                    });
+                };
+                plugin.init();
+            }
+        })(jQuery);
+        $(function(){
+            $.StartScreen();
+        });
+        
+</script>
+	<body>
+				    {{! The tag below includes the post loop - partials/loop.hbs }}
+					{{> "loop"}}
+
+		
+	</body>

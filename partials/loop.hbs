@@ -1,0 +1,18 @@
+{{! Previous/next page links - only displayed on page 2+ }}
+
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+<div class="box box-shadow">
+	<div class="title">
+		<a href="{{url}}"><h4>{{{title}}}</h4></a>
+		<div class="author">
+			<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin">{{author.name}} 于 {{date format='YYYY-MM-DD'}}
+		</div>
+	</div>
+	<a href="{{url}}"><div class="cover" style="background-image: url({{#if image}}{{image}}{{else}}{{asset "img/img1.png"}}{{/if}});"></div></a>
+	<div class="artcont">
+		<p>{{excerpt words="7"}} </p>
+	</div>
+	<a id="conread" href="{{url}}" class="button info block-shadow-info text-shadow">继续阅读</a>
+</div>
+{{/foreach}}
