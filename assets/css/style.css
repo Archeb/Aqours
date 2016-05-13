@@ -256,7 +256,7 @@ code, tt {
 
 .prevpage{
 	float:left;
-	margin-left:30%;
+	margin-left:10%;
 }
 .prevpage a{
 	position:absolute; top:50%;transform:translate(-50%,-50%);
@@ -266,7 +266,7 @@ code, tt {
 }
 .nextpage{
 	float:right;
-	margin-right:30%;
+	margin-right:10%;
 }
 @keyframes boxtran
 {
