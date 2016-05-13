@@ -80,7 +80,29 @@ code, tt {
 	}
 }
 
+@keyframes boxtran
+{
+from {opacity:0;}
+opacity:0.85;
+}
 
+@-moz-keyframes boxtran /* Firefox */
+{
+from {opacity:0;}
+opacity:0.85;
+}
+
+@-webkit-keyframes boxtran /* Safari 和 Chrome */
+{
+from {opacity:0;}
+opacity:0.85;
+}
+
+@-o-keyframes boxtran /* Opera */
+{
+from {opacity:0;}
+opacity:0.85;
+}
 
 .box-container{
 	padding:20px;
@@ -267,27 +289,4 @@ code, tt {
 .nextpage{
 	float:right;
 	margin-right:10%;
-}
-@keyframes boxtran
-{
-from {opacity:0;}
-opacity:0.85;
-}
-
-@-moz-keyframes boxtran /* Firefox */
-{
-from {opacity:0;}
-opacity:0.85;
-}
-
-@-webkit-keyframes boxtran /* Safari 和 Chrome */
-{
-from {opacity:0;}
-opacity:0.85;
-}
-
-@-o-keyframes boxtran /* Opera */
-{
-from {opacity:0;}
-opacity:0.85;
 }
