@@ -23,15 +23,17 @@
 			{{content}}
 		</div>
 		<div class="comments"> 
-			<div id="disqus_thread" class="margin10"></div>
+			<!-- 请根据自己的需要选择Disqus评论或多说评论，本主题对多说有自定义CSS修改 -->
+			
+			<!--<div id="disqus_thread" class="margin10"></div>
 			<script>
 			/**
 			* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 			* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
 			*/
 			var disqus_config = function () {
-			this.page.url = "https://qwq.moe/22.html";
-			this.page.identifier = 22};
+			this.page.url = "{{url absolute="true"}}";
+			this.page.identifier = {{id}} };
 			(function() { // DON'T EDIT BELOW THIS LINE
 			var d = document, s = d.createElement('script');
 			
@@ -43,8 +45,25 @@
 			</script>
 			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 			 
-			</div>
-
+			</div>-->
+			
+			
+			<!-- 多说评论框 start -->
+			<div class="ds-thread" data-thread-key="{{id}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
+			<!-- 多说评论框 end -->
+			<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+			<script type="text/javascript">
+			var duoshuoQuery = {short_name:"archebasic"};
+				(function() {
+					var ds = document.createElement('script');
+					ds.type = 'text/javascript';ds.async = true;
+					ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+					ds.charset = 'UTF-8';
+					(document.getElementsByTagName('head')[0] 
+					 || document.getElementsByTagName('body')[0]).appendChild(ds);
+				})();
+			</script>
+			<!-- 多说公共JS代码 end -->
 
 		</div>
 

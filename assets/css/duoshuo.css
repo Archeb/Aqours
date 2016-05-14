@@ -1,0 +1,13 @@
+#ds-thread #ds-reset .ds-replybox .ds-avatar img{
+	border-radius: 50%;
+}
+
+#ds-thread #ds-reset .ds-post-options .ds-sync{
+	display: none;
+}
+
+
+#ds-thread #ds-reset .ds-powered-by a:before{
+	content: "哼我才不会告诉你我用的是";
+}
+
